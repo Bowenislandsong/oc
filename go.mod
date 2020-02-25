@@ -9,7 +9,7 @@ require (
 	github.com/alexbrainman/sspi v0.0.0-20180613141037-e580b900e9f5
 	github.com/apcera/gssapi v0.0.0-00010101000000-000000000000
 	github.com/aws/aws-sdk-go v1.17.7
-	github.com/blang/semver v3.5.0+incompatible
+	github.com/blang/semver v3.5.1+incompatible
 	github.com/containerd/continuity v0.0.0-20191127005431-f65d91d395eb // indirect
 	github.com/containers/image v0.0.0-00010101000000-000000000000
 	github.com/containers/storage v0.0.0-20190726081758-912de200380a // indirect
@@ -33,12 +33,13 @@ require (
 	github.com/moby/buildkit v0.0.0-20181107081847-c3a857e3fca0
 	github.com/mtrmac/gpgme v0.0.0-20170102180018-b2432428689c // indirect
 	github.com/opencontainers/go-digest v1.0.0-rc1
-	github.com/openshift/api v0.0.0-20200205133042-34f0ec8dab87
+	github.com/openshift/api v3.9.1-0.20190924102528-32369d4db2ad+incompatible
 	github.com/openshift/build-machinery-go v0.0.0-20200206145628-a8567613b05c
 	github.com/openshift/client-go v0.0.0-20200116152001-92a2713fa240
 	github.com/openshift/library-go v0.0.0-20200206134157-b4c763d94dcf
-	github.com/operator-framework/operator-registry v1.5.4
-	github.com/pkg/errors v0.8.1
+	github.com/operator-framework/operator-registry v1.5.10
+	github.com/otiai10/curr v0.0.0-20190513014714-f5a3d24e5776 // indirect
+	github.com/pkg/errors v0.9.1
 	github.com/prometheus/client_golang v1.1.0
 	github.com/russross/blackfriday v1.5.2
 	github.com/spf13/cobra v0.0.5
@@ -51,15 +52,15 @@ require (
 	golang.org/x/sys v0.0.0-20190826190057-c7b8b68b1456
 	golang.org/x/time v0.0.0-20190308202827-9d24e82272b4
 	gopkg.in/ldap.v2 v2.5.1
-	k8s.io/api v0.17.1
-	k8s.io/apimachinery v0.17.1
+	k8s.io/api v0.17.2
+	k8s.io/apimachinery v0.17.2
 	k8s.io/apiserver v0.17.1
 	k8s.io/cli-runtime v0.17.0
-	k8s.io/client-go v0.17.1
+	k8s.io/client-go v8.0.0+incompatible
 	k8s.io/component-base v0.17.1
 	k8s.io/klog v1.0.0
-	k8s.io/kubectl v0.0.0
-	k8s.io/kubernetes v0.0.0-00010101000000-000000000000
+	k8s.io/kubectl v0.17.2
+	k8s.io/kubernetes v1.17.1
 	k8s.io/utils v0.0.0-20191114184206-e782cd3c129f
 	sigs.k8s.io/yaml v1.1.0
 )
@@ -67,6 +68,9 @@ require (
 replace (
 	github.com/apcera/gssapi => github.com/openshift/gssapi v0.0.0-20161010215902-5fb4217df13b
 	github.com/containers/image => github.com/openshift/containers-image v0.0.0-20190130162819-76de87591e9d
+	github.com/openshift/api => github.com/openshift/api v0.0.0-20200205133042-34f0ec8dab87
+	github.com/operator-framework/operator-registry => ../../operator-framework/operator-registry
+	google.golang.org/grpc => google.golang.org/grpc v1.23.1 // Pinned for github.com/coreos/etcd
 
 	k8s.io/api => k8s.io/api v0.17.1
 	k8s.io/apiextensions-apiserver => k8s.io/apiextensions-apiserver v0.17.1
